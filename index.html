@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NEJ Email Template</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=PT+Serif:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      /* Colors
+            #014647
+            #015759
+            #4d898b
+            #89191c */
+
+      .container {
+        background-color: teal;
+        text-align: center;
+        font-family: "Lato", sans-serif;
+        font-weight: 400;
+        color: rgb(52, 52, 52);
+        background: rgb(1, 70, 71);
+        background: linear-gradient(
+          180deg,
+          rgba(1, 70, 71, 1) 0%,
+          rgba(77, 137, 139, 1) 100%
+        );
+        padding: 4%;
+        margin: 0px;
+      }
+
+      h1 {
+        color: #015759;
+      }
+
+      h2 {
+        color: #015759;
+        font-size: 2rem;
+        text-align: center;
+      }
+
+      h3 {
+        font-size: 1.5rem;
+      }
+
+      p {
+        font-family: "PT Serif";
+        font-size: 14px;
+      }
+
+      ul {
+        list-style-type: none;
+        padding-inline-start: 0px;
+      }
+
+      hr {
+        margin: 2rem 0;
+      }
+
+      .article:link,
+      .article:visited {
+        color: #89191c;
+        text-decoration: none;
+        font-size: 16px;
+        font-weight: bold;
+      }
+      .article:hover,
+      .article:active {
+        color: #601214;
+      }
+
+      .container-white {
+        padding: 4% 10%;
+        background-color: white;
+      }
+
+      .nej-logo {
+        width: 45%;
+      }
+
+      .cover-img {
+        width: 45%;
+      }
+
+      .btn {
+        display: inline-block;
+        padding: 10px 20px;
+        background: rgba(77, 137, 139, 1);
+        margin: 2rem 0;
+        color: white;
+        font-family: "Lato", sans-serif;
+        border-radius: 7px;
+        text-decoration: none;
+        box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+      }
+      .btn:hover {
+        background: linear-gradient(
+          180deg,
+          rgba(1, 70, 71, 1) 0%,
+          rgba(77, 137, 139, 1) 100%
+        );
+      }
+
+      .btn-left {
+        margin-right: 3%;
+      }
+      .highlights-section {
+        background-color: rgba(250, 235, 215, 0.445);
+        text-align: left;
+        padding: 1% 5%;
+        margin-top: 2rem;
+      }
+
+      .highlights-section li {
+        margin: 1rem 0;
+      }
+
+      .article-title {
+        margin-block-start: 0px;
+      }
+
+      .grid-2-cols {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 2rem;
+        row-gap: 1rem;
+      }
+
+      .special-section,
+      .invited-papers {
+        border-top: solid gray 2px;
+        border-bottom: solid gray 2px;
+        padding-bottom: 1em;
+      }
+
+      .technical-papers {
+        grid-column: 1 / -1;
+      }
+
+      .advertisers-box {
+        background-color: #4d898b;
+        padding: 2% 5%;
+        margin: 2rem auto;
+        display: inline-block;
+      }
+
+      .advertisers-box h2 {
+        color: white;
+        margin-block-start: 0.3rem;
+      }
+
+      .advertisers-box a:link,
+      .advertisers-box a:visited {
+        color: white;
+        text-decoration: none;
+      }
+      .advertisers-box a:hover,
+      .advertisers-box a:active {
+        color: rgba(255, 255, 255, 0.581);
+      }
+
+      .advertisers-box li {
+        margin-bottom: 0.5rem;
+      }
+
+      .footer {
+        background-color: #e9ecef;
+        margin: 0 4% 4%;
+        padding: 1% 5%;
+      }
+
+      .footer p {
+        color: #868e96;
+        font-family: "Lato", sans-serif;
+        font-size: 12px;
+        line-height: 1.5;
+      }
+
+      .footer a:link,
+      .footer a:visited {
+        color: #4d898b;
+        text-decoration: none;
+      }
+      .asne-logo {
+        height: 100px;
+        width: 100px;
+      }
+
+      .footer h5 {
+        margin-block-end: 0px;
+        margin-block-start: 10px;
+      }
+
+      @media (max-width: 700px) {
+        .container {
+          padding-top: 7%;
+        }
+        .nej-logo {
+          width: 50%;
+        }
+
+        .cover-img {
+          width: 75%;
+        }
+
+        .grid-2-cols {
+          display: grid;
+          grid-template-columns: 1fr;
+        }
+
+        .columns,
+        .news-features,
+        .special-section,
+        .invited-papers,
+        .technical-papers {
+          border-top: solid gray 2px;
+          border-bottom: 0px;
+          padding-bottom: 1em;
+        }
+      }
+
+      @media (max-width: 445px) {
+        .container {
+          padding-top: 9%;
+        }
+
+        .nej-logo {
+          width: 75%;
+        }
+
+        .cover-img {
+          width: 100%;
+        }
+
+        .btn-left {
+          margin-top: 2rem;
+          margin-bottom: 0;
+          margin-right: 0;
+        }
+        .btn-right {
+          margin-top: 1rem;
+          margin-bottom: 2rem;
+        }
+
+        .highlights-section {
+          text-align: center;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="container-white">
+        <img
+          src="https://bonotom.com/wp-content/uploads/2023/03/NEJ_Logo2.png"
+          class="nej-logo"
+          alt="NEJ logo"
+        />
+        <h1>The December 2022 <em>Naval Engineers Journal</em> is online!</h1>
+        <p>
+          Access to the digital version of the Naval Engineers Journal is a
+          benefit of American Society of Naval Engineers (ASNE) membership.
+          Members receive a print copy of the latest issue as well as access to
+          the digital version and 134 years of content in the online technical
+          library hosted by IngentaConnect.
+          <br />
+          <a
+            href="http://www.navalengineers.org/cvweb/link.htm?https://bt.e-ditionsbyfry.com/publication/?i=779731==9617C523-98B8-4166-824E-C9C842CC2351/NEJ-Digital-Dec-22"
+            class="btn btn-left"
+            >Read Now</a
+          >
+
+          <a
+            href="http://www.navalengineers.org/cvweb/link.htm?https://bt.e-ditionsbyfry.com/publication/?i=779731==9617C523-98B8-4166-824E-C9C842CC2351/NEJ-Digital-Dec-22"
+            class="btn btn-right"
+            >Learn More About the <em>NEJ</em>
+          </a>
+        </p>
+        <a
+          href="http://www.navalengineers.org/cvweb/link.htm?https://bt.e-ditionsbyfry.com/publication/?i=779731==9617C523-98B8-4166-824E-C9C842CC2351/NEJ-Digital-Dec-22"
+        >
+          <img
+            src="https://bonotom.com/wp-content/uploads/2023/03/December-2022-NEJ-Cover.jpg"
+            alt="Image the december cover of the Naval Engineers Journal"
+            class="cover-img"
+          />
+        </a>
+        <!-- <hr /> -->
+
+        <!-- Highlights Section -->
+        <div class="highlights-section">
+          <h2>December 2022 Highlights</h2>
+          <div class="grid-2-cols">
+            <!-- Columns -->
+
+            <div class="columns">
+              <h3>Columns</h3>
+              <ul>
+                <li>
+                  <a
+                    class="article"
+                    href="https://bt.e-ditionsbyfry.com/publication/?i=779731&p=15&view=issueViewer"
+                  >
+                    From the Editorial Board
+                  </a>
+                  <p class="article-title">Combat & Weapon Systems</p>
+                </li>
+                <li>
+                  <a
+                    class="article"
+                    href="https://bt.e-ditionsbyfry.com/publication/?i=779731&p=17&view=issueViewer"
+                  >
+                    Guest Column
+                  </a>
+                  <p class="article-title">
+                    How Autonomy Fueled Humanity: RobotX 2022
+                  </p>
+                </li>
+                <li>
+                  <a
+                    class="article"
+                    href="https://bt.e-ditionsbyfry.com/publication/?i=779731&p=20&view=issueViewer"
+                  >
+                    ASNE Highlight
+                  </a>
+                  <p class="article-title">Annual Awards Program</p>
+                </li>
+              </ul>
+            </div>
+
+            <!-- News & Features -->
+
+            <div class="news-features">
+              <h3>News & Features</h3>
+
+              <ul>
+                <li>
+                  <a
+                    class="article"
+                    href="https://bt.e-ditionsbyfry.com/publication/?i=779731&p=22&view=issueViewer"
+                  >
+                    3D Metal Printers on Ships Add Up to Enhanced Readiness and
+                    Warfighting Capabilities
+                  </a>
+                </li>
+                <li>
+                  <a
+                    class="article"
+                    href="https://bt.e-ditionsbyfry.com/publication/?i=779731&p=27&view=issueViewer"
+                  >
+                    International Hydrofoil Society (IHS) Mandles Prize for
+                    Hydrofoil Excellence &mdash; 2022 First Prize
+                  </a>
+                </li>
+                <li>
+                  <a
+                    class="article"
+                    href="https://bt.e-ditionsbyfry.com/publication/?i=779731&p=41&view=issueViewer"
+                  >
+                    <br />From the Archives
+                  </a>
+                  <p class="article-title">
+                    The Goldilocks Effect in Naval Ship Design: Too Little, Too
+                    Much, Just Right
+                  </p>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Special Section -->
+
+            <div class="special-section">
+              <h3>Special Section</h3>
+              <ul>
+                <li>
+                  <a
+                    class="article"
+                    href="https://bt.e-ditionsbyfry.com/publication/?i=779731&p=59&view=issueViewer"
+                    >Introduction</a
+                  >
+                  <p class="article-title">Design Sciences Series 2022</p>
+                </li>
+                <li>
+                  <a
+                    class="article"
+                    href="https://bt.e-ditionsbyfry.com/publication/?i=779731&p=61&view=issueViewer"
+                  >
+                    Domain Specific Data Definition for Shipbuilding
+                  </a>
+                </li>
+                <li>
+                  <a
+                    class="article"
+                    href="https://bt.e-ditionsbyfry.com/publication/?i=779731&p=67&view=issueViewer"
+                  >
+                    Preliminary Hull-Form Design for a Semi-Submersible Vessel
+                    Using a Physics-Based Digital Model
+                  </a>
+                </li>
+                <li>
+                  <a
+                    class="article"
+                    href="https://bt.e-ditionsbyfry.com/publication/?i=779731&p=75&view=issueViewer"
+                  >
+                    Bridging the Gap from Construction to In-Service-How Can We
+                    Connect Operators with the Shipyards?
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Invited Papers -->
+
+            <div class="invited-papers">
+              <h3>Invited Papers</h3>
+              <ul>
+                <li>
+                  <a
+                    class="article"
+                    href="https://bt.e-ditionsbyfry.com/publication/?i=779731&p=81&view=issueViewer"
+                    >Concept Exploration Process, Methodology and Design Tools
+                    for Teaching Naval Ship Design</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="article"
+                    href="https://bt.e-ditionsbyfry.com/publication/?i=779731&p=93&view=issueViewer"
+                  >
+                    Nuisance Parameters in Design: Adding Context to Emergent
+                    Design Failure
+                  </a>
+                </li>
+                <li>
+                  <a
+                    class="article"
+                    href="https://bt.e-ditionsbyfry.com/publication/?i=779731&p=103&view=issueViewer"
+                  >
+                    Physics Incorporated Transport Evaluation for Preliminary
+                    Ship Designs Using Ship-Centric Markov Decision Process
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Technical Papers -->
+
+            <div class="technical-papers">
+              <h3>Technical Papers</h3>
+              <ul>
+                <li>
+                  <a
+                    class="article"
+                    href="https://bt.e-ditionsbyfry.com/publication/?i=779731&p=115&view=issueViewer"
+                    >Design and Modeling of the Navy Integrated Power and Energy
+                    Corridor Cooling System</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="article"
+                    href="https://bt.e-ditionsbyfry.com/publication/?i=779731&p=129&view=issueViewer"
+                  >
+                    Eco-friendly Suez Canal Ferries Incorporating PV/Shore
+                    Connection Hybrid Power System
+                  </a>
+                </li>
+                <li>
+                  <a
+                    class="article"
+                    href="https://bt.e-ditionsbyfry.com/publication/?i=779731&p=139&view=issueViewer"
+                  >
+                    Cosine Density Distribution Based Probabilistic Risk
+                    Approach for Modeling Ship Overtaking Candidates in Channels
+                  </a>
+                </li>
+                <li>
+                  <a
+                    class="article"
+                    href="https://bt.e-ditionsbyfry.com/publication/?i=779731&p=151&view=issueViewer"
+                  >
+                    Revision of Nomoto Model for Fast Ships
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Advertisers Box -->
+
+        <div class="advertisers-box">
+          <h2>Thank You to Our Advertisers</h2>
+          <ul>
+            <li>
+              <a
+                class="advertiser"
+                href="http://www.navalengineers.org/cvweb/link.htm?https://www.boozallen.com/==9617C523-98B8-4166-824E-C9C842CC2351/NEJ-Digital-Dec-22"
+                >Booz Allen Hamilton</a
+              >
+            </li>
+            <li>
+              <a
+                class="advertiser"
+                href="http://www.navalengineers.org/cvweb/link.htm?https://www.l3harris.com/==9617C523-98B8-4166-824E-C9C842CC2351/NEJ-Digital-Dec-22"
+                >L3 Harris</a
+              >
+            </li>
+            <li>
+              <a
+                class="advertiser"
+                href="http://www.navalengineers.org/cvweb/link.htm?https://philagear.com/==9617C523-98B8-4166-824E-C9C842CC2351/NEJ-Digital-Dec-22"
+                >Philadelphia Gear</a
+              >
+            </li>
+            <li>
+              <a
+                class="advertiser"
+                href="http://www.navalengineers.org/cvweb/link.htm?https://www.servicenow.com/==9617C523-98B8-4166-824E-C9C842CC2351/NEJ-Digital-Dec-22"
+                >ServiceNow</a
+              >
+            </li>
+            <li>
+              <a
+                class="advertiser"
+                href="http://www.navalengineers.org/cvweb/link.htm?https://www.fairbanksmorsedefense.com/home==9617C523-98B8-4166-824E-C9C842CC2351/NEJ-Digital-Dec-22"
+                >Ward Leonard, powered by Fairbanks Morse Defense</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Footer -->
+
+      <div class="footer">
+        <p>
+          <a
+            href="https://www.navalengineers.org/Membership/Membership-Dashboard/My-Communication-Preferences/eid/9617C523-98B8-4166-824E-C9C842CC2351"
+            >Click here</a
+          >
+          to unsubscribe from future ASNE emails, or to update your subscription
+          preferences.
+        </p>
+        <img class="asne-logo"/
+        src="https://bonotom.com/wp-content/uploads/2023/03/ASNElogo_CMYK.png"
+        alt="ASNE logo" href="http://www.navalengineers.org">
+        <h5>American Society of Naval Engineers</h5>
+        <p>
+          1423 Powhatan St, Suite 1 | Alexandria, VA 22314<br />
+          <a href="mailto:asnehq@navalengineers.org"
+            >asnehq@navalengineers.org</a
+          >
+          |
+          <a href="http://www.navalengineers.org">navalengineers.org</a><br />
+          703-836-6727
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
